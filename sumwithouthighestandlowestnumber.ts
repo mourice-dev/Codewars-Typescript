@@ -15,15 +15,14 @@
 export function sumArray(array: number[] | null ): number {
     //   return array?.length === 0  ? 0 : array
     if (array) {
-        const high: number = Math.max(...array);
-        const low: number = Math.min(...array);
-        return array
-          ?.filter((num) => num != high && num != low)
-          .reduce((a, b) => a + b);
+       const sorted :number[] = array.sort((a,b) => a-b);
+        const rel :number[] = sorted.slice(1,-1);
+        return rel.reduce((a,b) => a+b,0);
     }
+
     else {
         return 0;
     }
     
 }
-console.log(sumArray([6, 2, 1, 8, 10]));
+console.log(sumArray([6, 0, 1, 10, 10]));

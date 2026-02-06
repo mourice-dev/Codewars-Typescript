@@ -14,12 +14,12 @@ exports.sumArray = sumArray;
 function sumArray(array) {
     //   return array?.length === 0  ? 0 : array
     if (array) {
-        var high_1 = Math.max.apply(Math, array);
-        var low_1 = Math.min.apply(Math, array);
-        return array === null || array === void 0 ? void 0 : array.filter(function (num) { return num != high_1 && num != low_1; }).reduce(function (a, b) { return a + b; });
+        var sorted = array.sort(function (a, b) { return a - b; });
+        var rel = sorted.slice(1, -1);
+        return rel.reduce(function (a, b) { return a + b; });
     }
     else {
         return 0;
     }
 }
-console.log(sumArray([6, 2, 1, 8, 10]));
+console.log(sumArray([6, 0, 1, 10, 10]));
