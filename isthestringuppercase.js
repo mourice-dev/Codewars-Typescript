@@ -1,7 +1,9 @@
+"use strict";
 // Is the string uppercase?
 // Task
 // Create a method to see whether the string is ALL CAPS.
-
+// Object.defineProperty(exports, "__esModule", { value: true });
+// exports.isUpperCase = isUpperCase;
 // Examples (input -> output)
 // "c" -> False
 // "C" -> True
@@ -10,9 +12,7 @@
 // "ACSKLDFJSgSKLDFJSKLDFJ" -> False
 // "ACSKLDFJSGSKLDFJSKLDFJ" -> True
 // In this Kata, a string is said to be in ALL CAPS whenever it does not contain any lowercase letter so any string containing no letters at all is trivially considered to be in ALL CAPS.
-
-export function isUpperCase(str: string): boolean {
-  
-  return str === str.toUpperCase()? true : false ;
-} 
+function isUpperCase(str) {
+   return str === str.toUpperCase() ? true : false
+}
 console.log(isUpperCase("c")); // false
