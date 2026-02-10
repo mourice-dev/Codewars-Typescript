@@ -17,7 +17,7 @@ function noBoringZeros(n) {
     if (n > 0) {
         var nn = n.toString().split("");
         
-        while (nn[nn.length -1 ] === "0") {
+        while (nn[nn.length - 1 ] === "0") {
             nn.pop();
            
         }
