@@ -26,7 +26,7 @@
 export function noBoringZeros(n: number) {
   if (n === 0) return 0;
   let nn = n.toString().split("");
-  // .pop() returns the last string element, so the comparison works!
+
   while (nn[nn.length - 1] === "0") {
     nn.pop();
   }
