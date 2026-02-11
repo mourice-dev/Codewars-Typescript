@@ -23,10 +23,19 @@
 // }
 // console.log(noBoringZeros(1450));
 
-export function noBoringZeros(n: number) {
-  if (n === 0) return 0;
-  let nn = n.toString().split("");
+// function noBoringZeros(n: number) {
+//   if (n === 0) return 0;
+//   let nn = n.toString().split("");
 
+//   while (nn[nn.length - 1] === "0") {
+//     nn.pop();
+//   }
+//   return Number(nn.join(""));
+// }
+
+export function noBoringZeros(n: number): number {
+  if (n === 0) return 0;
+  var nn = n.toString().split("");
   while (nn[nn.length - 1] === "0") {
     nn.pop();
   }
