@@ -10,3 +10,20 @@
 
 // sayHi :: Person -> String
 // sayHi p = "Hi"
+// module PersonSaysHi where
+type Person = {
+    firstName: string,
+    lastName: string
+};  
+const person: Person = {
+    firstName: "nshuti",
+    lastName:  "maurice"
+};
+// sayHi :: Person -> String
+// sayHi p = "Hi"
+
+
+function sayHi(person : Person){
+    return `Hi, i'am ${person.firstName} ${person.lastName} and it is nice to meet You.`;
+}
+console.log(sayHi(person));
