@@ -11,19 +11,24 @@
 // sayHi :: Person -> String
 // sayHi p = "Hi"
 // module PersonSaysHi where
-type Person = {
-    firstName: string,
-    lastName: string
-};  
-const person: Person = {
+
+// namespace PersonSaysHi {
+  // data Person = Person { firstName :: String, lastName :: String }
+
+  // sayHi :: Person -> String
+  // sayHi p = "Hi"
+
+  type Person = {
+    firstName: string;
+    lastName: string;
+  };
+  const person: Person = {
     firstName: "nshuti",
-    lastName:  "maurice"
-};
-// sayHi :: Person -> String
-// sayHi p = "Hi"
+    lastName: "maurice",
+  };
 
-
-function sayHi(person : Person){
+  export function PersonSaysHi(person: Person) {
     return `Hi, i'am ${person.firstName} ${person.lastName} and it is nice to meet You.`;
-}
-console.log(sayHi(person));
+  }
+
+  console.log(PersonSaysHi(person));
