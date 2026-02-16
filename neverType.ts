@@ -77,3 +77,14 @@ function shapeHandle(shape: Shape) {
         
     }
 }
+
+function Throwerrors() : never {
+    throw new Error("something went wrong");
+    
+}
+
+function infiniteFun(): never {
+    while (true) {
+        
+    }
+}
