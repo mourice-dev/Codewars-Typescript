@@ -62,3 +62,18 @@ const authorize = (role: Role): string => {
 
 console.log(authorize('admin'));
 
+
+type Shape = "square" | "circle";
+
+function shapeHandle(shape: Shape) {
+    if (shape === "square") {
+        console.log("square");
+    }
+     else if (shape === "circle") {
+       console.log("circle");
+    }
+    else {
+      const  shapeHandles: never = shape;
+        
+    }
+}
