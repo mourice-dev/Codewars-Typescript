@@ -24,3 +24,10 @@ export function bmi(weight: number, height: number): string {
       throw new Error("The method or operation is not implemented.");
 }
 console.log(bmi(50, 1.80));
+
+// interface  mm   {
+//     n: number;
+// }
+// type nm = {
+//     n: number;
+// }
