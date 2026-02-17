@@ -11,19 +11,42 @@
 // ('/', 49, 7) --> 7
 
 export function basicOp(operation: string, value1: number, value2: number): number {
+    let result: number; 
  switch (operation) {
    case "+":
-     return value1 + value2;
+         result = value1 + value2;
+         return result;
      break;
    case "-":
-     return value1 - value2;
+         result = value1 - value2;
+         return result;
      break;
    case "*":
-     return value1 * value2;
+         result = value1 * value2;
+         return result;
      break;
    case "/":
-     return value1 / value2;
-     break;
- }
+         result = value1 / value2;
+         return result;
+         break;
+     default:
+         return 0;
+         break;
+     }
+    // if (operation === "+") {
+    //     return value1 + value2;
+    // }
+    // if (operation === "/") {
+    //   return value1 / value2;
+    // }
+    // if (operation === "*") {
+    //   return value1 * value2;
+    // }
+    // if (operation === "-") {
+    //   return value1 - value2;
+    // }
+    // else {
+    //     return 0
+    // }
 }
 console.log(basicOp("+", 4, 7));
