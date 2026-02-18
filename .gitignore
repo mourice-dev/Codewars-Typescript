@@ -1,6 +1,13 @@
-package.json
+# Dependencies
 node_modules/
+
+# Build artifacts
+*.js
+*.d.ts
+*.map
+
+# Generated/Misc files
+package.json
 package-lock.json
 tool`updateCollectionRequest`has inval.txt
-package.json
-*.js
+fromTheMinimum.txt

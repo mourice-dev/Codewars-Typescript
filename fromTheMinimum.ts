@@ -1,3 +1,8 @@
+// To run this file correctly, use one of these commands in your terminal:
+// 1. Run directly (Recommended): npx tsx fromTheMinimum.ts
+// 2. Compile all files (uses tsconfig.json): npx tsc
+// 3. Compile just this file (manual flags): npx tsc fromTheMinimum.ts --target es2015 --lib es2015,dom
+
 // Task
 // Given a list of digits, return the smallest number that could be formed from these digits,
 //  using the digits only once (ignore duplicates). Only positive integers in the range of 1 to 9 
@@ -7,16 +12,16 @@
 // [1, 3, 1] ==> 13
 // [5, 7, 5, 9, 7] ==> 579
 // [1, 9, 3, 1, 7, 4, 6, 6, 7]  ==> 134679
-export const minValue = (values: number[]) : number => {
-  const isPositive :boolean = values.every((index) => index > 0);
+export const minValue = (values: number[]): number => {
+  const isPositive: boolean = values.every((index) => index > 0);
   if (isPositive === false) {
-      console.log("negative number they aren't allowed");
-      return 0;
+    console.log("negative number they aren't allowed");
+    return 0;
   } else {
-    let sets  = new Set(values);
-    let arr : number[] = [...sets];
+    let sets = new Set(values);
+    let arr: number[] = [...sets];
 
-    let sorts : number[] = arr.sort((a, b) => a - b);
+    let sorts: number[] = arr.sort((a, b) => a - b);
     //  Math.min(a), Math.max(a));
     return Number(sorts.join(""));
   }
