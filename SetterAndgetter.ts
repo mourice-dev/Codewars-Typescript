@@ -88,3 +88,7 @@ console.log(person.age);
 //     this.lastName = parts[1];
 //   }
 // }
+// let person = new Person(22, 'Jane', 'Doe');
+
+// person.fullName = 'Jane Smith';
+// console.log(person.fullName); //   "Jane Smith" 
