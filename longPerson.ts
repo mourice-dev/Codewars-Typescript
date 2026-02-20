@@ -18,28 +18,21 @@
  * @format
  */
 
-
-// interface User {
-//   name: string;
-//   age: number;
-//   occupation: string;
-// }
-
-// interface Admin {
-//   name: string;
-//   age: number;
-//   role: string;
-// }
-export type Person = {
+interface User {
   name: string;
   age: number;
-  occupation?: string;
-  role?: string;
-};
+  occupation: string;
+}
 
+interface Admin {
+  name: string;
+  age: number;
+  role: string;
+}
 
+export type Person = User | Admin;
 
-export const persons: Person[] = [
+export const persons: Person[] /* <- Person[] */ = [
   {
     name: "Max Mustermann",
     age: 25,
@@ -70,4 +63,3 @@ persons.forEach(logPerson);
 
 // In case you are stuck:
 // https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types
-/** @format */
