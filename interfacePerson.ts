@@ -4,11 +4,13 @@ interface Person {
     lastname: string
 };
 
-function getFullname(person: Person) {
+function getFullname({firstname, lastname}: Person) {
     // if (person.middlename) {
     //     return `${person.firstname} ${person.middlename} ${person.lastname}`;
     // }
-    return `${person.firstname} ${person.lastname}`;
+    return `${firstname} ${lastname}`;
+
+    // return `${person.firstname} ${person.lastname}`;
 }
 
 const john = {
