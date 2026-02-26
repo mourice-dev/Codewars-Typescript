@@ -6,9 +6,9 @@ interface Person {
 };
 
 function getFullname(person: Person) {
-    // if (person.middlename) {
-    //     return `${person.firstname} ${person.middlename} ${person.lastname}`;
-    // }
+    if (person.middlename) {
+        return `${person.firstname} ${person.middlename} ${person.lastname}`;
+    }
     // return `${firstname} ${lastname}`;
 
     return `${person.firstname} ${person.lastname}`;
