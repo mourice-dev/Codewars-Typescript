@@ -1,21 +1,30 @@
 /** @format */
 interface Person {
-    firstname: string,
-    lastname: string
+  firstname: string;
+  middlename?: string;
+  lastname: string;
 };
 
-function getFullname({firstname, lastname}: Person) {
+function getFullname(person: Person) {
     // if (person.middlename) {
     //     return `${person.firstname} ${person.middlename} ${person.lastname}`;
     // }
-    return `${firstname} ${lastname}`;
+    // return `${firstname} ${lastname}`;
 
-    // return `${person.firstname} ${person.lastname}`;
+    return `${person.firstname} ${person.lastname}`;
 }
 
-const john = {
-    firstname: "nshuti",
-    lastname: "maurice"
-}
+let jane = {
+  firstname: 'Jane',
+  middlename: 'K.',
+  lastname: 'Doe',
+  age: 22,
+};
 
-console.log(getFullname(john))
+// const john = {
+//     firstname: "nshuti",
+//     lastname: "maurice"
+// }
+// console.log(getFullname(jane))
+let fullName = getFullname(jane);
+console.log(fullName); // Jane Doe
