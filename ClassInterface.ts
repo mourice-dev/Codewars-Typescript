@@ -8,7 +8,8 @@ class Person implements Json{
 
 toJSON(): string {
     
-    return Json.stringify(this);
+    // return Json.stringify(this);
+     return JSON.stringify(this);
     }
 }
 
