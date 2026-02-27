@@ -1,22 +1,39 @@
-class Control {
-    state: boolean;
+class Person {
+  public state(): void;
 }
 
-interface StatefulControl extends Control {
-    enable(): void
+interface peoples extends Person{
+    state () : void  // mr
 }
 
-class Button extends Control implements StatefulControl {
-    enable() { }
+class Student extends Person implements peoples {
+    state(): void {} // method 
 }
-class TextBox extends Control implements StatefulControl {
-    enable() { }
+
+class teachers implements peoples {
+  state(): void {} // method
 }
-class Label extends Control { }
 
 
-// Error: cannot implement
-class Chart implements StatefulControl {
-    enable() { }
+// class Control {
+//     private state: boolean;
+// }
 
-}
+// interface StatefulControl extends Control {
+//     enable(): void
+// }
+
+// class Button extends Control implements StatefulControl {
+//     enable() { }
+// }
+// class TextBox extends Control implements StatefulControl {
+//     enable() { }
+// }
+// class Label extends Control { }
+
+
+// // Error: cannot implement
+// class Chart implements StatefulControl {
+//     enable() { }
+
+// }
