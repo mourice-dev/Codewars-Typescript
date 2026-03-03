@@ -1,22 +1,25 @@
 /** @format */
 
 class Stack<T>{
-    private elemets: T[] = [];
-    constructor(private size: T[]) {
-        this.elemets = [];
+    private elements: T[] = [];
+
+    constructor(private size: number) {
+      
     }
     isEmpty(): boolean {
-        return this.elemets.length === 0
+        return this.elements.length === 0;
     }
     isFull(): boolean {
-        return this.elemets.length === this.size
-        }
+        return this.elements.length === this.size;
     }
-    push(elemet: T): void {
-        
-        this.elemets.push(elemet);
+    push(element: T): void {
+        this.elements.push(element);
     }
     pop(): T {
-        return this.elemets.pop()
+        if (this.elements.length === 0) {
+            throw Error("this stack it's empty");
+        } else {
+            return this.elements.pop() as T;
+        }
     }
 }
