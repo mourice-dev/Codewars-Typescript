@@ -12,5 +12,12 @@
 // /** @format */
 
 export function strCount(str: string, letter: string): number {
-  // GO!
+  let chars: string[] = str.split("").filter((char) => {
+    if (char === letter) {
+      return char;
+    } else {
+      return "";
+    }
+  });
+  return chars ? chars.length : 0;
 }
