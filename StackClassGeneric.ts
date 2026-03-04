@@ -22,4 +22,26 @@ class Stack<T>{
             return this.elements.pop() as T;
         }
     }
+    getAll() {
+        return this.elements
+    }
 }
+
+let numbers = new Stack<number>(5);
+
+function getRandom(H: number, L: number): number {
+    return Math.floor(Math.random() * (H - L + 1) + L);
+}
+
+while (!numbers.isFull()) {
+    let n = getRandom(1, 8);
+    numbers.push(n)
+}
+console.log(numbers.getAll());
+
+
+while (!numbers.isEmpty()) {
+    let n = numbers.pop();
+    
+}
+
