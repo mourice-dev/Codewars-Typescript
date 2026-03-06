@@ -9,5 +9,7 @@
 // filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
 
 export function filter_list(l: Array<any>): Array<number> {
-  // Return a new array with the strings filtered out
+   return l.filter((char) => typeof char === "number")
 }
+console.log(filter_list([1, 2, "a", "b"]));
+
