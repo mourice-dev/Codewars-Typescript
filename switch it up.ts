@@ -38,7 +38,7 @@ export function switchItUp(intNumber: number): string {
       return "Nine";
       break;
     default:
-      return "please enter number between 9-0";
+      return "Zero";
       break;
   }
 }
