@@ -18,5 +18,13 @@
 // cap = 100, on = 60, wait = 50 --> 10 # He can't fit 10 of the 50 waiting
 
 export function enough(cap: number, on: number, wait: number): number {
-  // your code here
+  const emptySit = cap - on;
+  if (emptySit > wait) {
+    return 0;
+  } else {
+    const remainder = Math.abs(cap - (on + wait));
+    return remainder;
+  }
 }
+console.log(enough(10, 5, 5));
+console.log(enough(50, 15, 10), 0);
