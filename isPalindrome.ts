@@ -5,5 +5,9 @@
 //  the same backwards as forwards, such as madam or racecar.
 
 export function isPalindrome(x: string): boolean {
-  return true;
+  const normalize = x.toLowerCase();
+  const reversing = normalize.split("").reverse().join("");
+  return normalize === reversing;
 }
+console.log(isPalindrome("Abba"));
+console.log(isPalindrome("hello"));
