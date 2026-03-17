@@ -1,7 +1,7 @@
 /** @format */
 // Count the number of divisors of a positive integer n.
 
-// Random tests go up to n = 500000, but fixed tests go higher.
+// Random tests go up to n = 500000, but fixed itests go higher.
 
 // Examples (input --> output)
 // 4 --> 3 // we have 3 divisors - 1, 2 and 4
